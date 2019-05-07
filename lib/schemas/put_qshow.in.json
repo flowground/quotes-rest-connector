@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "title": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "description": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "tags": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "X_TheySaidSo_Api_Secret": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

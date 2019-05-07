@@ -1,0 +1,409 @@
+{
+    "title": "They Said So Quotes",
+    "description": " They Said So Quotes API offers a complete feature rich REST API access to its quotes platform.  This is the documentation for the world famous [quotes API](https://theysaidso.com/api).  If you are a subscriber and you are trying this from a console add 'X-TheySaidSo-Api-Secret' header and add your api key as the header value. You can test and play with the API right here on this web page. For using the private end points and subscribing to the API please visit https://theysaidso.com/api.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/quotes.rest/2.1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://quotes.rest/",
+                    "http://quotes.rest/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_qod": {
+            "main": "./lib/actions/get_qod.js",
+            "title": "Gets `Quote of the Day`.\nOptional `category` param determines\nthe category of returned quote of the day\n",
+            "description": "Gets `Quote of the Day`.\nOptional `category` param determines\nthe category of returned quote of the day\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qod.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qod_categories": {
+            "main": "./lib/actions/get_qod_categories.js",
+            "title": "Gets a list of `Quote of the Day` Categories.\n",
+            "description": "Gets a list of `Quote of the Day` Categories.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qod_categories.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_qshow": {
+            "main": "./lib/actions/delete_qshow.js",
+            "title": "Delete a qshow.\n",
+            "description": "Delete a qshow.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_qshow.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qshow": {
+            "main": "./lib/actions/get_qshow.js",
+            "title": "Gets a details about a qshow.\n",
+            "description": "Gets a details about a qshow.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qshow.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_qshow": {
+            "main": "./lib/actions/patch_qshow.js",
+            "title": "Update an existing qshow.",
+            "description": "Update an existing qshow.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_qshow.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_qshow": {
+            "main": "./lib/actions/put_qshow.js",
+            "title": "Create and add a new qshow to your private collection.",
+            "description": "Create and add a new qshow to your private collection.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_qshow.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qshow_list": {
+            "main": "./lib/actions/get_qshow_list.js",
+            "title": "Get the list of Qshows in They Said So platform.",
+            "description": "Get the list of Qshows in They Said So platform.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qshow_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qshow_quotes": {
+            "main": "./lib/actions/get_qshow_quotes.js",
+            "title": "Get the quotes in a given Qshow.",
+            "description": "Get the quotes in a given Qshow.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qshow_quotes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_qshow_quotes_add": {
+            "main": "./lib/actions/post_qshow_quotes_add.js",
+            "title": "Add a quote to a given Qshow.",
+            "description": "Add a quote to a given Qshow.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_qshow_quotes_add.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_qshow_quotes_remove": {
+            "main": "./lib/actions/post_qshow_quotes_remove.js",
+            "title": "Remove a quote to a given Qshow.",
+            "description": "Remove a quote to a given Qshow.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_qshow_quotes_remove.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_quote": {
+            "main": "./lib/actions/delete_quote.js",
+            "title": "Delete a quote. The user needs to be the owner of the quote to be able to delete it.\n",
+            "description": "Delete a quote. The user needs to be the owner of the quote to be able to delete it.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_quote.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_quote": {
+            "main": "./lib/actions/get_quote.js",
+            "title": "Gets a `Quote` with a given `id`.",
+            "description": "Gets a `Quote` with a given `id`.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_quote.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_quote": {
+            "main": "./lib/actions/patch_quote.js",
+            "title": "Update a quote",
+            "description": "Update a quote",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_quote.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_quote": {
+            "main": "./lib/actions/put_quote.js",
+            "title": "Add a new quote to your private collection.",
+            "description": "Add a new quote to your private collection.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_quote.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_quote_authors": {
+            "main": "./lib/actions/get_quote_authors.js",
+            "title": "Gets a list of author names in the system. \n",
+            "description": "Gets a list of author names in the system. \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_quote_authors.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_quote_categories": {
+            "main": "./lib/actions/get_quote_categories.js",
+            "title": "Gets a list of `Quote` Categories.\n",
+            "description": "Gets a list of `Quote` Categories.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_quote_categories.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_quote_image_search": {
+            "main": "./lib/actions/get_quote_image_search.js",
+            "title": "Gets a Random Quote image. Optional `category` param determinesthe category of quote used in the image. Optional `author` param gets the quote image of a given author. \n",
+            "description": "Gets a Random Quote image. Optional `category` param determinesthe category of quote used in the image. Optional `author` param gets the quote image of a given author. \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_quote_image_search.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_quote_list": {
+            "main": "./lib/actions/get_quote_list.js",
+            "title": "Get the list of quotes in your private collection.",
+            "description": "Get the list of quotes in your private collection.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_quote_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_quote_random": {
+            "main": "./lib/actions/get_quote_random.js",
+            "title": "Gets a `Random Quote`. When you are in a hurry this is what you call to get a random famous quote.",
+            "description": "Gets a `Random Quote`. When you are in a hurry this is what you call to get a random famous quote.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_quote_random.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_quote_search": {
+            "main": "./lib/actions/get_quote_search.js",
+            "title": "Search for a `Quote` in They Said So platform. Optional `category` , `author`, `minlength`, `maxlength` params determines the filters applied while searching for the quote. ",
+            "description": "Search for a `Quote` in They Said So platform. Optional `category` , `author`, `minlength`, `maxlength` params determines the filters applied while searching for the quote. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_quote_search.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_quote_tags_add": {
+            "main": "./lib/actions/post_quote_tags_add.js",
+            "title": "Add a tag to a given Quote.",
+            "description": "Add a tag to a given Quote.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_quote_tags_add.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_quote_tags_remove": {
+            "main": "./lib/actions/post_quote_tags_remove.js",
+            "title": "Remove a tag from a given quote.",
+            "description": "Remove a tag from a given quote.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_quote_tags_remove.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

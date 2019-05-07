@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "category": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "author": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "private": {
+            "required": false,
+            "type": "boolean",
+            "format": "boolean",
+            "default": false
+        },
+        "X_TheySaidSo_Api_Secret": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

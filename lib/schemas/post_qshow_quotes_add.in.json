@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "quoteid": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "X_TheySaidSo_Api_Secret": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

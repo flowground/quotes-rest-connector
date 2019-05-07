@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "X_TheySaidSo_Api_Secret": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "quote": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "author": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "tags": {
+            "required": false,
+            "type": "string"
+        },
+        "X_TheySaidSo_Api_Secret": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}
